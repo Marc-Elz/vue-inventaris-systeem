@@ -3,7 +3,9 @@ import { RouterLink, RouterView } from "vue-router";
 </script>
 
 <template>
-  <nav></nav>
+  <nav>
+    <RouterLink to="/inventory/overview">Overview Page</RouterLink>
+  </nav>
   <main>
     <RouterView />
   </main>
