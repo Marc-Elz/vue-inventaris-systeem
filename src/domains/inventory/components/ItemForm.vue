@@ -25,7 +25,7 @@ import type { inventoryItemType } from "../store.ts";
 
 const emit = defineEmits(["submitEvent"]);
 
-const item = defineProps<inventoryItemType>();
+const props = defineProps<{ item: inventoryItemType }>();
 
-const itemCopy = ref({ ...item });
+const itemCopy = ref({ ...props.item });
 </script>
