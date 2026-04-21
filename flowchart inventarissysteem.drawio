@@ -1,0 +1,28 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Pagina-1" id="j6Oib68wkdNz8U5cgUgX">
+    <mxGraphModel dx="1414" dy="751" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="1guvro84i7hNdFB2Y2ty-2" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;" value="" vertex="1">
+          <mxGeometry height="100" width="100" x="370" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="1guvro84i7hNdFB2Y2ty-3" parent="1" style="shape=internalStorage;whiteSpace=wrap;html=1;dx=15;dy=15;rounded=1;arcSize=8;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="70" width="70" x="90" y="420" as="geometry" />
+        </mxCell>
+        <mxCell id="1guvro84i7hNdFB2Y2ty-6" parent="1" style="ellipse;shape=doubleEllipse;whiteSpace=wrap;html=1;" value="Start" vertex="1">
+          <mxGeometry height="60" width="100" x="414" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="1guvro84i7hNdFB2Y2ty-8" parent="1" style="ellipse;shape=doubleEllipse;whiteSpace=wrap;html=1;" value="End" vertex="1">
+          <mxGeometry height="60" width="100" x="420" y="585" as="geometry" />
+        </mxCell>
+        <mxCell id="1guvro84i7hNdFB2Y2ty-9" parent="1" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" value="" vertex="1">
+          <mxGeometry height="60" width="120" x="480" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="1guvro84i7hNdFB2Y2ty-10" parent="1" style="shape=manualInput;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="80" width="80" x="160" y="300" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
