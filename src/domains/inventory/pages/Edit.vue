@@ -8,19 +8,18 @@
   />
 </template>
 
-<script setup>
-import { getItemById, editItem } from "../store";
+<script setup lang="ts">
+import { getItemById, editItem, type inventoryItemType } from "../store";
 import ItemForm from "../components/ItemForm.vue";
 import { useRoute, useRouter } from "vue-router";
-import { computed, watch } from "vue";
 
 const route = useRoute();
 const router = useRouter();
 
-const paramsId = route.params.id;
-const selectedItem = getItemById(paramsId);
+const paramsId: any = route.params.id;
+let selectedItem: inventoryItemType | undefined = getItemById(paramsId).value;
 
-const handeSubmit = (changedItem) => {
+const handeSubmit = (changedItem: inventoryItemType) => {
   editItem(changedItem);
   router.push("/inventory/overview");
 };
@@ -28,4 +27,10 @@ const handeSubmit = (changedItem) => {
 const cancelEvent = () => {
   router.push("/inventory/overview");
 };
+
+if (selectedItem === undefined) {
+  cancelEvent();
+  console.warn("Something went wrong selecting the item");
+  selectedItem = { id: -1, name: "error", actualAmount: 0, minimumAmount: 0 };
+}
 </script>
