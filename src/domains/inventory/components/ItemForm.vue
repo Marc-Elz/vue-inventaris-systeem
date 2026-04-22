@@ -14,7 +14,7 @@
         Minimum Amount:
         <input type="number" v-model.number="itemCopy.minimumAmount" min="0" />
       </li>
-      <button @click="emit('cancelEvent')">Cancel</button>
+      <button @click.prevent="emit('cancelEvent')">Cancel</button>
       <button @click.prevent="emit('submitEvent', itemCopy)">Submit</button>
     </ul>
   </form>

@@ -22,4 +22,16 @@ export const getItemById = (id: number) =>
   computed(() => items.value.find((item) => item.id == id));
 export const addItem = (item: inventoryItem) => items.value.push(item);
 
+export const editItem = (item: inventoryItem) => {
+  const oldItem = getItemById(item.id);
+
+  if (oldItem!.value) {
+    oldItem.value.name = item.name;
+    oldItem.value.actualAmount = item.actualAmount;
+    oldItem.value.minimumAmount = item.minimumAmount;
+  } else {
+    console.error("Failed to edit item of " + item.id);
+  }
+};
+
 export type { inventoryItem as inventoryItemType };

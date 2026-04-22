@@ -17,14 +17,22 @@
           <input type="number" v-model.number="item.actualAmount" min="0" />
         </td>
         <td>{{ item.minimumAmount }}</td>
+        <button @click="redirectToPage(item.id)">Edit</button>
       </tr>
     </tbody>
   </table>
 </template>
 
 <script setup lang="ts">
+import { useRouter } from "vue-router";
 import { getAllItems } from "../store.ts";
 import type { inventoryItemType } from "../store.ts";
 
+const router = useRouter();
+
 const items: inventoryItemType[] = getAllItems.value;
+
+const redirectToPage = (id: number) => {
+  router.push("/inventory/" + id);
+};
 </script>
