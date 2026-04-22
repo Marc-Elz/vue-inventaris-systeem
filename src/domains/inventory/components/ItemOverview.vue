@@ -25,12 +25,18 @@
 
 <script setup lang="ts">
 import { useRouter } from "vue-router";
-import { getAllItems } from "../store.ts";
+import { getAllItems, getFilteredItems } from "../store.ts";
 import type { inventoryItemType } from "../store.ts";
 
+const props = defineProps<{ filter: boolean }>();
 const router = useRouter();
 
-const items: inventoryItemType[] = getAllItems.value;
+let items: inventoryItemType[] | undefined;
+if (!props.filter) {
+  items = getAllItems.value;
+} else {
+  items = getFilteredItems.value;
+}
 
 const redirectToPage = (id: number) => {
   router.push("/inventory/" + id);

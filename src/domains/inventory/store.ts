@@ -34,4 +34,8 @@ export const editItem = (item: inventoryItem) => {
   }
 };
 
+export const getFilteredItems = computed(() =>
+  items.value.filter((item) => item.actualAmount < item.minimumAmount),
+);
+
 export type { inventoryItem as inventoryItemType };
