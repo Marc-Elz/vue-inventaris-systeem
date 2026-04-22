@@ -9,9 +9,10 @@
 </template>
 
 <script setup lang="ts">
-import { getItemById, editItem, type inventoryItemType } from "../store";
+import { getItemById, editItem } from "../store";
 import ItemForm from "../components/ItemForm.vue";
 import { useRoute, useRouter } from "vue-router";
+import type { inventoryItemType } from "../types";
 
 const route = useRoute();
 const router = useRouter();
