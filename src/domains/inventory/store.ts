@@ -1,14 +1,7 @@
 import { ref, computed } from "vue";
+import type { inventoryItemType } from "./types";
 
-interface inventoryItem {
-  id: number;
-  name: string;
-  actualAmount: number;
-  minimumAmount: number;
-  price?: number;
-}
-
-const items = ref<inventoryItem[]>([
+const items = ref<inventoryItemType[]>([
   {
     id: 214,
     name: "DarkSouls1",
@@ -63,10 +56,10 @@ const items = ref<inventoryItem[]>([
 export const getAllItems = computed(() => items.value);
 export const getItemById = (id: number) =>
   computed(() => items.value.find((item) => item.id == id));
-export const addItem = (item: inventoryItem) => items.value.push(item);
+export const addItem = (item: inventoryItemType) => items.value.push(item);
 
-export const editItem = (item: inventoryItem) => {
-  const oldItem: inventoryItem | undefined = getItemById(item.id).value;
+export const editItem = (item: inventoryItemType) => {
+  const oldItem: inventoryItemType | undefined = getItemById(item.id).value;
 
   if (oldItem != undefined) {
     oldItem.name = item.name;
@@ -80,5 +73,3 @@ export const editItem = (item: inventoryItem) => {
 export const getFilteredItems = computed(() =>
   items.value.filter((item) => item.actualAmount < item.minimumAmount),
 );
-
-export type { inventoryItem as inventoryItemType };

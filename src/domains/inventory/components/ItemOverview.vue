@@ -28,7 +28,7 @@
 <script setup lang="ts">
 import { useRouter } from "vue-router";
 import { getAllItems, getFilteredItems } from "../store.ts";
-import type { inventoryItemType } from "../store.ts";
+import type { inventoryItemType } from "../types.ts";
 
 const props = defineProps<{ filter: boolean }>();
 const router = useRouter();

@@ -10,7 +10,7 @@
 <script setup lang="ts">
 import ItemForm from "../components/ItemForm.vue";
 import { useRouter } from "vue-router";
-import type { inventoryItemType } from "../store.ts";
+import type { inventoryItemType } from "../types.ts";
 import { addItem } from "../store.ts";
 
 const router = useRouter();
