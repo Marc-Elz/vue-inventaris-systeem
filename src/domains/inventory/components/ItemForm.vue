@@ -31,7 +31,7 @@
 
 <script setup lang="ts">
 import { ref } from "vue";
-import type { inventoryItemType } from "../store.ts";
+import type { inventoryItemType } from "../types";
 
 const emit = defineEmits(["submitEvent", "cancelEvent"]);
 

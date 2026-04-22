@@ -27,20 +27,13 @@
 
 <script setup lang="ts">
 import { useRouter } from "vue-router";
-import { getAllItems, getFilteredItems } from "../store.ts";
 import type { inventoryItemType } from "../types.ts";
 
-const props = defineProps<{ filter: boolean }>();
+const { items } = defineProps<{ items: inventoryItemType[] }>();
 const router = useRouter();
 
-let items: inventoryItemType[] | undefined;
-if (!props.filter) {
-  items = getAllItems.value;
-} else {
-  items = getFilteredItems.value;
-}
-
 const redirectToPage = (id: number) => {
+  // todo :: ${}
   router.push("/inventory/" + id);
 };
 </script>

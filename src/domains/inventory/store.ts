@@ -58,15 +58,15 @@ export const getItemById = (id: number) =>
   computed(() => items.value.find((item) => item.id == id));
 export const addItem = (item: inventoryItemType) => items.value.push(item);
 
-export const editItem = (item: inventoryItemType) => {
-  const oldItem: inventoryItemType | undefined = getItemById(item.id).value;
+export const editItem = (inventoryItem: inventoryItemType) => {
+  const oldItem = items.value.find((item) => item.id == inventoryItem.id);
 
   if (oldItem != undefined) {
-    oldItem.name = item.name;
-    oldItem.actualAmount = item.actualAmount;
-    oldItem.minimumAmount = item.minimumAmount;
+    oldItem.name = inventoryItem.name;
+    oldItem.actualAmount = inventoryItem.actualAmount;
+    oldItem.minimumAmount = inventoryItem.minimumAmount;
   } else {
-    console.error("Failed to edit item of " + item.id);
+    console.error("Failed to edit item of " + inventoryItem.id);
   }
 };
 
