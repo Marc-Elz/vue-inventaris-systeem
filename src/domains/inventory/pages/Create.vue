@@ -1,6 +1,10 @@
 <template>
   <div>Add product</div>
-  <ItemForm @submitEvent="updateInventory" :item="empty_item" />
+  <ItemForm
+    @submitEvent="updateInventory"
+    @cancelEvent="cancelEvent"
+    :item="empty_item"
+  />
 </template>
 
 <script setup lang="ts">
@@ -19,6 +23,10 @@ let empty_item: inventoryItemType = {
 
 const updateInventory = (newItem: inventoryItemType) => {
   addItem(newItem);
+  router.push("/inventory/overview");
+};
+
+const cancelEvent = () => {
   router.push("/inventory/overview");
 };
 </script>

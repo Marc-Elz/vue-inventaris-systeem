@@ -14,7 +14,8 @@
         Minimum Amount:
         <input type="number" v-model.number="itemCopy.minimumAmount" min="0" />
       </li>
-      <button @click.prevent="emit('submitEvent', itemCopy)">submit</button>
+      <button @click="emit('cancelEvent')">Cancel</button>
+      <button @click.prevent="emit('submitEvent', itemCopy)">Submit</button>
     </ul>
   </form>
 </template>
@@ -23,7 +24,7 @@
 import { ref } from "vue";
 import type { inventoryItemType } from "../store.ts";
 
-const emit = defineEmits(["submitEvent"]);
+const emit = defineEmits(["submitEvent", "cancelEvent"]);
 
 const props = defineProps<{ item: inventoryItemType }>();
 
