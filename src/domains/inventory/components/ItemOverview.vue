@@ -7,6 +7,7 @@
         <th>item</th>
         <th>Actual amount</th>
         <th>Minimal amount</th>
+        <th>Price</th>
       </tr>
     </thead>
     <tbody>
@@ -17,6 +18,7 @@
           <input type="number" v-model.number="item.actualAmount" min="0" />
         </td>
         <td>{{ item.minimumAmount }}</td>
+        <td>{{ item.price }}</td>
         <button @click="redirectToPage(item.id)">Edit</button>
       </tr>
     </tbody>
