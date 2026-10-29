@@ -1,5 +1,18 @@
-# Vue 3 + TypeScript + Vite
+# Vue Inventaris Systeem
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+A small inventory system: list items with their actual and minimum stock, create and edit items, and see an overview of shortages.
 
-Learn more about the recommended Project Setup and IDE Support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).
+A frontend-only exercise in structuring a Vue app per domain (pages, components, store, routes, types). Data lives in memory, there is no backend. The planning flowchart is in `flowchart inventarissysteem.drawio`.
+
+## Tech stack
+
+Vue 3, TypeScript, Vue Router, Vite
+
+## Getting started
+
+Requires Node.js.
+
+```bash
+npm install
+npm run dev
+```
